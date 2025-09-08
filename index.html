@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guía 1 · HTML & CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020; --card:#0f172a; --ink:#e5e7eb;
+      --muted:#94a3b8; --accent:#38bdf8; --accent2:#16a34a; --accent3:#facc15;
+      --border:#1f2937;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:"Roboto",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,.12), transparent),
+                  radial-gradient(1200px 600px at 110% 10%, rgba(250,204,21,.10), transparent),
+                  linear-gradient(180deg, #0b1020, #0a0f1d);
+      color:var(--ink);
+    }
+    header{padding:40px 16px; text-align:center}
+    h1{
+      font-family:"Bebas Neue", sans-serif;
+      letter-spacing:.5px;
+      margin:0;
+      font-size:clamp(28px,5vw,48px);
+    }
+    main{max-width:1100px; margin:28px auto 36px; padding:0 16px}
+    .grid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    a.card{
+      display:block; text-decoration:none; color:inherit;
+      background:linear-gradient(180deg, var(--card), #0c1426);
+      border:1px solid var(--border);
+      border-radius:16px; padding:18px;
+      transition:.2s transform, .2s border-color, .2s box-shadow;
+      min-height:140px;
+    }
+    a.card:hover{ transform:translateY(-4px); border-color:var(--accent); box-shadow:0 10px 30px rgba(0,0,0,.25) }
+    .card h2{ margin:0 0 8px; font-size:20px }
+    .card p{ margin:0; color:var(--muted); line-height:1.5 }
+    .tag{ display:inline-block; margin-left:8px; border:1px solid #334155; color:#cbd5e1; border-radius:999px; font-size:12px; padding:2px 8px }
+    .series{ border-color:#3f6212 }
+    .series:hover{ border-color:var(--accent3) }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guía 1 — Introducción a HTML & CSS</h1>
+  </header>
+
+  <main>
+    <div class="grid">
+      <a class="card" href="estilos_embebidos.html">
+        <h2>Ejemplo 1 <span class="tag">Estilos embebidos</span></h2>
+        <p>Página con estilos definidos en atributos <code>style</code> dentro del HTML.</p>
+      </a>
+
+      <a class="card" href="ejemplo2.html">
+        <h2>Ejemplo 2 <span class="tag">&lt;style&gt; en &lt;head&gt;</span></h2>
+        <p>Reglas CSS internas aplicadas desde la cabecera del documento.</p>
+      </a>
+
+      <a class="card" href="paises.html">
+        <h2>Ejemplo 3 <span class="tag">CSS externo</span></h2>
+        <p>Reglas CSS definidas en archivos externos.</p>
+      </a>
+
+      <a class="card series" href="serie.html">
+        <h2>Página de la serie <span class="tag">Breaking Bad</span></h2>
+        <p>Breaking Bad</p>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

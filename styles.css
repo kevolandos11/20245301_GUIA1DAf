@@ -1,0 +1,114 @@
+/* === Breaking Bad Themed Styles === */
+/* Google Fonts already imported in HTML (Bebas Neue, Roboto) */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(180deg, #facc15 0%, #111827 100%);
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+#titulo-serie {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(32px, 6vw, 60px);
+  color: #16a34a;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.subtitulo {
+  color: #facc15;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Sections */
+.titulo-seccion {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  color: #16a34a;
+  border-bottom: 2px solid #facc15;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* Cards */
+.tarjeta {
+  background: #1f2937;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* Characters */
+.personaje {
+  border: 2px solid #16a34a;
+  transition: transform .2s, border-color .2s;
+}
+.personaje:hover {
+  transform: scale(1.03);
+  border-color: #facc15;
+}
+.personaje .nombre {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  color: #facc15;
+}
+
+/* Buttons */
+.btn {
+  background: #16a34a;
+  color: #111827;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background .2s;
+  display: inline-block;
+  margin: 4px;
+}
+.btn:hover {
+  background: #facc15;
+  color: #000;
+}
+
+.btn.primario {
+  background: #facc15;
+  color: #111827;
+}
+
+.btn.primario:hover {
+  background: #16a34a;
+  color: #fff;
+}
+
+/* Lists */
+.lista {
+  margin: 8px 0 0 18px;
+}
+.badge {
+  display:inline-block;
+  min-width:34px; text-align:center;
+  padding:2px 8px; border-radius:999px;
+  background:linear-gradient(180deg, #16a34a, #065f46);
+  font-weight:700; color:white
+}
+
+/* Grid */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:16px;
+  margin-top:12px;
+}
+
+/* Images */
+.portada {
+  width:100%; 
+  height:auto; 
+  border-radius:12px; 
+  display:block; 
+  margin-top:12px
+}
